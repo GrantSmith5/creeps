@@ -1,25 +1,23 @@
-var roleSoldier = {
+const roleSoldier = {
 
-    /** @param {Creep} creep **/
-    run: function(creep) {
+    /** @param {Creep} creep * */
+    run(creep) {
+        const chaaarge = true;
+        const stageInvasion = false;
+        const specialTargets = [];
+        const specialTarget = Game.getObjectById('5b3b6c552814d977f694cff8');
 
-        var chaaarge = true;
-        var stageInvasion = false;
-        var specialTargets = [];
-        var specialTarget = Game.getObjectById('5b3b6c552814d977f694cff8');
-
-        if(stageInvasion === true){
-            creep.moveTo(Game.flags['Flag1']);
+        if (stageInvasion === true) {
+            creep.moveTo(Game.flags.Flag1);
         }
 
-        if(chaaarge === true){
-            
-            if(specialTarget){
-                if(creep.attack(specialTarget) == ERR_NOT_IN_RANGE){
+        if (chaaarge === true) {
+            if (specialTarget) {
+                if (creep.attack(specialTarget) == ERR_NOT_IN_RANGE) {
                     creep.moveTo(specialTarget);
                 }
             }
-                /*
+            /*
                 if(creep.attack(specialTargets[0] === -7)){
                     specialTargets.shift();
                 }
@@ -28,11 +26,11 @@ var roleSoldier = {
                         creep.moveTo(specialTargets[0]);
                     }
                 }
-                
+
             }
             else{
                 */
-               /*
+            /*
                 const target = creep.pos.findClosestByRange(FIND_HOSTILE_CREEPS);
                     if(target) {
                         if(creep.attack(target) == ERR_NOT_IN_RANGE) {
@@ -40,9 +38,8 @@ var roleSoldier = {
                         }
                     }
                     */
-                
         }
-	}
+    },
 };
 
 module.exports = roleSoldier;

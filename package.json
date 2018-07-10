@@ -4,7 +4,10 @@
   "description": "Custom AI for screeps game",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "grunt": "grunt",
+    "lint": "eslint src/",
+    "fix": "eslint --fix src/"
   },
   "repository": {
     "type": "git",
@@ -19,6 +22,11 @@
   "homepage": "https://github.com/GrantSmith5/creeps#README.md",
   "devDependencies": {
     "dotenv": "^6.0.0",
+    "eslint": "^5.1.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
     "grunt": "^1.0.3",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-copy": "^1.0.0",
